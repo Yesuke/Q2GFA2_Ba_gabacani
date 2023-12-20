@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.title{ 
+    display: flex;
+    justify-content: space-between;
+    color:aliceblue;
+}
+.title p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: aliceblue;
+}
+.bodytext h1{
+    margin-left: 34.5vw;
+    margin-top: 15vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: aliceblue;
+}
+body{
+    background-image: url(Images/deepfieldhubble.jpg);
+    z-index: 0;
+    
+}
+cbs{
+z-index: 1;
+}
+.galaxy img{
+    width: 300px;
+  height: 300px;
+
+}
+
+.galaxy{
+  position: relative;
+  animation: galaxy 10s infinite;
+}
+
+@keyframes galaxy {
+    0% {left: -10px;}
+    100% {left: 2160px;}
+  }
+
+ .blackhole img{
+    width: 100px;
+  height: 100px;
+
+}
+.blackhole{
+    position:relative;
+    animation: blackhole 30s infinite;
+  }
+  
+  @keyframes blackhole {
+    0% {transform: scale(150%);}
+    50%{transform:scale(100%);}
+    100%{transform:scale(150%);}
+
+    }
+    .lava img{
+        width: 300px;
+      height: 300px;
+    
+    }
+    
+    .lava{
+      position: relative;
+      animation: lava 25s infinite;
+    }
+    
+    @keyframes lava {
+        0%{transform: skewY(0deg);}
+    50%{transform:skewY(30deg);}
+    100%{transform: skewY(0deg);}
+      }
+      .earf img{
+        width: 200px;
+      height: 200px;
+    
+    }
+    
+    .earf{
+      position: relative;
+      animation: earf 25s infinite;
+    }
+    
+    @keyframes earf {
+        0%{ transform: rotate(0deg);}
+        25%{transform:rotate(360deg);}
+        100%{transform:rotate(0deg);}
+      }
+
+  
