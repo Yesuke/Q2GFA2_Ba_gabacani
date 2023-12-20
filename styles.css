@@ -3,10 +3,20 @@
     margin: 0;
     overflow: hidden;
 }
-.title{ 
+text{
+    z-index: 2;
+}
+.title { 
     display: flex;
     justify-content: space-between;
     color:aliceblue;
+}
+.title a{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: aliceblue;
+    text-decoration: none;
+
 }
 .title p {
     font-family: 'Courier New', Courier, monospace;
@@ -26,7 +36,7 @@ body{
     
 }
 cbs{
-z-index: 1;
+z-index: 0;
 }
 .galaxy img{
     width: 300px;
@@ -40,24 +50,27 @@ z-index: 1;
 }
 
 @keyframes galaxy {
-    0% {left: -10px;}
+    0% {left: -100vw;}
     100% {left: 2160px;}
   }
 
  .blackhole img{
-    width: 100px;
-  height: 100px;
+    width: 500px;
+  height: 500px;
 
 }
 .blackhole{
     position:relative;
-    animation: blackhole 30s infinite;
+    animation: blackhole 10s infinite;
   }
   
   @keyframes blackhole {
-    0% {transform: scale(150%);}
-    50%{transform:scale(100%);}
-    100%{transform:scale(150%);}
+   
+    0%{transform: skewY(0deg); top: 40vh;}
+    50%{transform:skewX(30deg);}
+    100%{transform: skewY(0deg); top: -105vh;}
+    
+
 
     }
     .lava img{
@@ -68,13 +81,13 @@ z-index: 1;
     
     .lava{
       position: relative;
-      animation: lava 25s infinite;
+      animation: lava 15s infinite;
     }
-    
     @keyframes lava {
-        0%{transform: skewY(0deg);}
-    50%{transform:skewY(30deg);}
-    100%{transform: skewY(0deg);}
+        0% {transform: scale(150%); top: 40vh;}
+    50%{transform:scale(100%);}
+    100%{transform:scale(150%);top: -105vh;}
+     
       }
       .earf img{
         width: 200px;
@@ -84,13 +97,19 @@ z-index: 1;
     
     .earf{
       position: relative;
-      animation: earf 25s infinite;
+      animation: earf 20s infinite;
     }
     
     @keyframes earf {
         0%{ transform: rotate(0deg);}
         25%{transform:rotate(360deg);}
         100%{transform:rotate(0deg);}
+      }
+
+      .neptune{
+        position: absolute;
+        top: 5vh;
+        right: 40vw;
       }
 
   
